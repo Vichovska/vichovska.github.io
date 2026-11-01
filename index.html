@@ -92,15 +92,22 @@
       margin: 28px 0;
     }
 
-    
-    .highlight {
-        background: none;
-        padding: 0;
-        text-decoration-line: underline;
-        text-decoration-color: var(--accent);
-        text-decoration-thickness: 3px;
-        text-underline-offset: 10px;
-    }
+.highlight {
+    position: relative;
+    background: none;
+    padding: 0;
+    text-decoration: none;
+}
+
+.highlight::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: calc(100% + 12vw);
+    height: 3px;
+    background: var(--accent);
+}
 
     .intro {
       font-size: 19px;
